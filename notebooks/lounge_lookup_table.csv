@@ -1,13 +1,7 @@
-Grouping,Tier 1 %,Tier 2 %,Tier 3 %,Notes
-Short-haul AM,0.3%,4.4%,16.7%,High volume of business commuters; expect short dwell times.
-Short-haul PM,0.3%,4.4%,16.9%,Standard mix of leisure and status passengers.
-Long-haul AM,0.2%,3.0%,11.3%,Standard mix of leisure and status passengers.
-Long-haul PM,0.2%,2.9%,11.1%,Peak premium demand; passengers likely to dine in lounge.
-European (All Times),0.3%,4.4%,16.9%,Standard mix of leisure and status passengers.
-North America,0.2%,2.9%,11.2%,Standard mix of leisure and status passengers.
-,,,,
-JUSTIFICATION / REPORT,,,,
-1. GROUPING METHOD,Grouped by Haul Type & Time (AM/PM),,,
-2. KEY INSIGHT,The 'Short-haul AM' group shows the highest premium demand (0.3% Gold members).,,,
-3. OPERATIONAL NOTE,"The 'Short-haul PM' group drives the most volume (16.9% Bronze/Club), requiring faster service.",,,
-4. SCALABILITY,Model uses dynamic logic (Time < 12) to adapt to future schedules.,,,
+Grouping,Tier 1 %,Tier 2 %,Tier 3 %,Notes,,,Question,Justification
+Short-haul AM,0.30%,4.40%,16.70%,High volume of business commuters; expect short dwell times.,,,How did you group the flights in your table?,"I grouped flights by intersecting Route Duration (Short-haul vs. Long-haul) with Departure Time (AM vs. PM), while keeping key regions like 'Europe' distinct."
+Short-haul PM,0.30%,4.40%,16.90%,Standard mix of leisure and status passengers.,,,Why did you choose that grouping method?,This captures operational reality better than simple averages. Short-haul AM (business commuters) has very different lounge needs than Long-haul PM (leisure/sleepers).
+Long-haul AM,0.20%,3.00%,11.30%,Standard mix of leisure and status passengers.,,,What assumptions did you make about passenger eligibility?,I calculated percentages directly from historical data. My analysis found that Europe (~21%) has higher eligibility than North America (~14%) due to frequent flyer density.
+Long-haul PM,0.20%,2.90%,11.10%,Peak premium demand; passengers likely to dine in lounge.,,,How can your model apply to future or changing flight schedules?,"The model uses dynamic logic (e.g., Time < 12 = AM) instead of hard-coded flight numbers, so it instantly adapts to any new schedule file."
+European (All Times),0.30%,4.40%,16.90%,Standard mix of leisure and status passengers.,,,,
+North America,0.20%,2.90%,11.20%,Standard mix of leisure and status passengers.,,,,

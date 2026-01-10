@@ -1,16 +1,36 @@
 # British Airways Data Science Project
 
 ## ✈️ Project Overview
-This repository contains the analysis and findings from the British Airways Data Science Project from Forage. The project focuses on two main business problems:
-1. **Lounge Utilization:** Predicting passenger lounge traffic to optimize staffing and stock.
-2. **Customer Sentiment:** Analysis of customer reviews to identify service gaps.
+This repository contains the analysis and machine learning models developed for the British Airways Data Science Virtual Internship. The project tackles two critical business problems: optimizing lounge staffing through data modeling and predicting customer booking behavior using machine learning.
 
-## 📂 Structure
-* `data/`: Contains raw and processed datasets (ignored by git).
-* `notebooks/`: Jupyter notebooks for exploratory data analysis.
-* `outputs/`: Generated charts and reports.
+## 📊 Task 1: Lounge Utilization Analysis
+**Goal:** Estimate lounge demand per flight to optimize staffing and stock allocation.
 
-## 🛠️ Installation
-1. Clone the repo:
-   ```bash
-   git clone [https://github.com/YOUR_USERNAME/British-Airways-Data-Science-Experience.git](https://github.com/kyawzaww-linn/British_Airways_Data_Science_Project.git)
+* **Approach:** Built a probabilistic "Lookup Table" using Python to estimate passenger eligibility based on flight metadata (Route, Time, Aircraft).
+* **Key Findings:**
+    * **Europe** routes have the highest density of eligible passengers (~21.6%), driven by frequent business commuters.
+    * **Long-haul PM** flights drive the highest demand for premium dining services.
+    * **Strategic Recommendation:** Shift staffing peaks to align with "Short-haul AM" departure waves rather than total passenger volume.
+* **Key Files:** `01_lounge_utilization_analysis.ipynb`, `lounge_lookup_table.csv`
+
+## 🤖 Task 2: Customer Booking Prediction
+**Goal:** Build a predictive model to identify which customers are most likely to complete a flight booking.
+
+* **Approach:**
+    * Trained a **Random Forest Classifier** on 50,000 customer records.
+    * Engineered features from booking data (Lead time, Route, Ancillaries).
+* **Results:**
+    * **Accuracy:** **85.2%**
+    * **Top Predictor:** `purchase_lead` (Time between search and travel) is the strongest indicator of buying behavior.
+    * **Insight:** Customers selecting **ancillaries** (Extra Bags, Preferred Seats) show significantly higher booking intent.
+* **Key Files:** `02_customer_booking_prediction.ipynb`, `customer_booking.csv`
+
+## 📂 Repository Structure
+```text
+├── 01_lounge_utilization_analysis.ipynb   # Task 1: Data Cleaning & Logic
+├── 02_customer_booking_prediction.ipynb   # Task 2: Machine Learning Model
+├── lounge_lookup_table.csv                # Task 1 Output: The Strategy Table
+├── customer_booking.csv                   # Task 2 Data: Source file
+├── justification.md                       # Task 1: Methodology Explanation
+├── requirements.txt                       # Dependencies
+└── README.md                              # Project Documentation
