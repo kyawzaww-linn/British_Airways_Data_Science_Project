@@ -31,6 +31,5 @@ This repository contains the analysis and machine learning models developed for 
 ├── 02_customer_booking_prediction.ipynb   # Task 2: Machine Learning Model
 ├── lounge_lookup_table.csv                # Task 1 Output: The Strategy Table
 ├── customer_booking.csv                   # Task 2 Data: Source file
-├── justification.md                       # Task 1: Methodology Explanation
 ├── requirements.txt                       # Dependencies
 └── README.md                              # Project Documentation
